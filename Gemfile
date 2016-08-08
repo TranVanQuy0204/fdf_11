@@ -13,6 +13,9 @@ gem "bootstrap-will_paginate"
 gem "font-awesome-rails"
 gem "config"
 gem "devise"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
+>>>>>>> show product on category
 group :development, :test do
   gem "byebug"
 end
