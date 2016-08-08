@@ -4,3 +4,30 @@ en:
   title: "Eat only natural food"
   call_us: "Call us at"
   phone: "0902004984"
+  devise:
+    confirmations:
+      confirmation_title: "Resend confirmation instructions"
+      confirmation_btn: "Resend confirmation instructions"
+    registrations:
+      new:
+        title: "Sign Up"
+        signup_btn: "Sign up"
+        min_characters: "characters minimum"
+      edit:
+        title: "Edit"
+        update_btn: "Update"
+        cancel_btn: "Cancel my account"
+        cancel_title: "Cancel my account"
+        confirm_cancel_msg: "Are you sure?"
+        back_btn: "Back"
+        edit_pass_msg: "(leave blank if you don't want to change it)"
+        min_characters: "characters minimum"
+        confirm_msg: "(we need your current password to confirm your changes)"
+        wait_msg: "Currently waiting confirmation for: "
+    shared:
+      login_link: "Login"
+      signup_link: "Sign up"
+      forgot_passowrd: "Forgot your password?"
+      not_recieve_email: "Didn't receive confirmation instructions?"
+      not_unlock: "Didn't receive unlock instructions?"
+      authen_signup: "Sign in with"

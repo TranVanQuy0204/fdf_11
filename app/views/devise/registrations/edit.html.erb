@@ -1,0 +1,39 @@
+<h2><%= t ".title" %><%= resource_name.to_s.humanize %></h2>
+<%= form_for resource, as: resource_name, url: registration_path(resource_name),
+  html: {method: :put} do |f| %>
+  <%= devise_error_messages! %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div><%= t ".wait_msg" %><%= resource.unconfirmed_email %>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :password %>
+      <i><%= t ".edit_pass_msg" %></i>
+    <br />
+    <%= f.password_field :password, autocomplete: "off" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %><%= t ".min_characters" %></em>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :current_password %>
+    <i><%= ".confirm_msg" </i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+  <div class="actions">
+    <%= f.submit t(".update_btn") %>
+  </div>
+<% end %>
+<h3><%= t "cancel_title" %></h3>
+<%= button_to t(".cancel_btn"), registration_path(resource_name),
+  data: {confirm: t(".confirm_cancel_msg")}, method: :delete %>
+<%= link_to t(".back_btn"), :back %>
