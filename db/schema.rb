@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805063435) do
+ActiveRecord::Schema.define(version: 20160805164940) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "target_id"
@@ -96,14 +96,26 @@ ActiveRecord::Schema.define(version: 20160805063435) do
 
   add_index "suggests", ["user_id"], name: "index_suggests_on_user_id"
 
+  create_table "tokens", force: :cascade do |t|
+    t.string   "access_token"
+    t.string   "refresh_token"
+    t.datetime "expires_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "name"
     t.integer  "role"
     t.string   "address"
     t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
 end
