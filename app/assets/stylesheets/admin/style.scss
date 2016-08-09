@@ -9,6 +9,9 @@
   font-family: PT-SAN;
   src: url(../app/fonts/PTS56F.ttf);
 }
+body {
+  background-color: #f8f8f8;
+}
 .navbar-top-links{
   li{
   a{
@@ -57,4 +60,22 @@
   letter-spacing: 0;
   line-height: 1;
   background-image: asset_url("images/title_logo.png");
+}
+#page-wrapper {
+    border-left: 1px solid #e7e7e7;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    position: inherit;
+}
+.search-param{
+  padding: 10px 0px;
+}
+.btn-circle {
+    border-radius: 15px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 1.42857;
+    padding: 6px 0;
+    text-align: center;
+    width: 30px;
 }

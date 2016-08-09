@@ -14,6 +14,11 @@ gem "font-awesome-rails"
 gem "config"
 gem "devise"
 gem "cancancan", "~> 1.10"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
+gem "kaminari"
+gem "ransack"
+gem "bootstrap-kaminari-views"
 group :development, :test do
   gem "byebug"
 end

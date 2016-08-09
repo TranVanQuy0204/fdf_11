@@ -31,3 +31,9 @@ en:
       not_recieve_email: "Didn't receive confirmation instructions?"
       not_unlock: "Didn't receive unlock instructions?"
       authen_signup: "Sign in with"
+  admin:
+    users:
+      index:
+        search: "Search"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
