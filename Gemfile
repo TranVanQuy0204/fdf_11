@@ -13,6 +13,7 @@ gem "bootstrap-will_paginate"
 gem "font-awesome-rails"
 gem "config"
 gem "devise"
+gem "cancancan", "~> 1.10"
 group :development, :test do
   gem "byebug"
 end

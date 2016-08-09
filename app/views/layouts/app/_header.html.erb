@@ -130,12 +130,46 @@
                     </span>
                   <% end %>
                 </li>
-                <li class="edu-widget-store_cart_and_profile-item">
-                  <%= link_to root_path,
-                    class: "edu-widget-store_cart_and_profile-link" do %>
-                    <i class="fa fa-user"></i>
-                  <% end %>
-                </li>
+                <% if user_signed_in? %>
+                  <li class="edu-widget-store_cart_and_profile-item">
+                    <%= link_to "#",
+                      class: "edu-widget-store_cart_and_profile-link
+                      dropdown-toggle", data: {toggle: "dropdown"},
+                      aria: {expanded: "false"} do %>
+                      <i class="fa fa-user"></i>
+                      <i class="fa fa-caret-down"></i>
+                    <% end %>
+                    <ul class="dropdown-menu dropdown-user">
+                      <li>
+                       <%= link_to "#" do %>
+                          <i class="fa fa-user fa-fw"></i>
+                          <%= t ".user_profile" %>
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to admin_root_path do %>
+                          <i class="fa fa-gear fa-fw"></i>
+                          <%= t ".user_profile" %>
+                        <% end %>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <%= link_to destroy_user_session_path,
+                          method: :delete do %>
+                          <i class="fa fa-sign-out fa-fw"></i>
+                          <%= t ".user_logout" %>
+                        <% end %>
+                      </li>
+                    </ul>
+                  </li>
+                <% else %>
+                  <li class="edu-widget-store_cart_and_profile-item">
+                    <%= link_to new_user_session_path,
+                      class: "edu-widget-store_cart_and_profile-link" do %>
+                      <i class="fa fa-user"></i>
+                    <% end %>
+                  </li>
+                <% end %>
               </ul>
             </div>
           </div>

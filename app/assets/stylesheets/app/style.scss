@@ -26,8 +26,6 @@ body {
   font-size: 13px;
   line-height: 16px;
   margin: 0;
-  min-width: 320px;
-  overflow: hidden;
   width: 100%;
 }
 .edu-container_header_546f07b9 {
@@ -233,8 +231,6 @@ a {
 }
 .edu-widget .edu-widget-store_cart_and_profile .edu-widget-store_cart_and_profile-link {
   color: #7ca877;
-  letter-spacing: 3px;
-  padding-left: 12px !important;
   transition: color 0.3s ease 0s;
 }
 .edu-widget .edu-widget-store_cart_and_profile .edu-widget-store_cart_and_profile-link:hover {
@@ -638,4 +634,8 @@ input, button, select, textarea {
     font-weight: 400;
     text-decoration: none;
   }
+}
+.dropdown-menu {
+  right: 0px;
+  left: auto;
 }
