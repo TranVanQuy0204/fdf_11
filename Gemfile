@@ -16,6 +16,7 @@ gem "devise"
 gem "will_paginate"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "cancancan", "~> 1.10"
 group :development, :test do
   gem "byebug"
 end
