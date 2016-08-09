@@ -1,5 +1,5 @@
 class Activity < ActiveRecord::Base
-  enum action_type: [:order, :register, :cancel, :suggest, :rate]
+  # enum action_type: [:order, :register, :cancel, :suggest, :rate]
 
   belongs_to :user
 

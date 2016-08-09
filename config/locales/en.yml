@@ -4,6 +4,9 @@ en:
   title: "Eat only natural food"
   call_us: "Call us at"
   phone: "0902004984"
+  time:
+    formats:
+      default: "%d %b %Y %H:%M:%S"
   devise:
     confirmations:
       confirmation_title: "Resend confirmation instructions"
@@ -31,3 +34,13 @@ en:
       not_recieve_email: "Didn't receive confirmation instructions?"
       not_unlock: "Didn't receive unlock instructions?"
       authen_signup: "Sign in with"
+  admin:
+    users:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+      user:
+        delete: "Delete"
+        edit: "Edit"
