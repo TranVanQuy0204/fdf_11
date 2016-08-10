@@ -31,7 +31,7 @@ body {
 }
 a {
   color: #337ab7;
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: transparent;
 }
 img {
@@ -856,6 +856,13 @@ input, button, select, textarea {
   display: inline-block;
   vertical-align: top;
 }
+
+.moto-widget-button.moto-preset-default .moto-widget-button-link {
+  border-bottom: 3px solid;
+  border-radius: 2px;
+  padding: 13px 35px 10px;
+  text-shadow: 0 3px 2px #8ab186;
+}
 .moto-widget-button.moto-preset-default .moto-widget-button-link {
   background-color: #acd373;
   border-color: #95c74d;
@@ -863,12 +870,6 @@ input, button, select, textarea {
   font-family: "PT Sans",sans-serif;
   font-style: normal;
   font-weight: 700;
-}
-.moto-widget-button.moto-preset-default .moto-widget-button-link {
-  border-bottom: 3px solid;
-  border-radius: 2px;
-  padding: 13px 35px 10px;
-  text-shadow: 0 3px 2px #8ab186;
 }
 .moto-widget-button .moto-widget-button-link.moto-size-medium {
   font-size: 16px;
@@ -974,3 +975,10 @@ input, button, select, textarea {
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label,
 .rating > input:checked ~ label:hover ~ label{color: #FFED85;}
+.moto-widget-button.moto-preset-default .moto-widget-button-link:hover {
+  color: #ffffff;
+  background-color: #7ca877;
+}
+.card-image{
+  max-width: 100px
+}

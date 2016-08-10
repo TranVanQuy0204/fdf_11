@@ -1,0 +1,79 @@
+<div class="clear-fix"></div>
+<section id="section-content" class="content page-29 moto-section">
+  <div class="moto-widget moto-widget-row row-fixed">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="moto-cell col-sm-12">
+          <div class="moto-widget moto-widget-text moto-preset-default
+            moto-spacing-top-large moto-spacing-right-auto
+            moto-spacing-bottom-auto moto-spacing-left-auto">
+              <div class="moto-widget-text-content moto-widget-text-editable">
+                <p class="moto-text_system_4 text-center">
+                  <span class="moto-color_custom5">
+                    <%= t".card" %>
+                  </span>
+                </p>
+              </div>
+          </div>
+          <div class="moto-widget moto-widget-divider moto-preset-default
+            moto-align-center moto-spacing-top-small moto-spacing-right-auto
+            moto-spacing-bottom-small moto-spacing-left-auto">
+              <hr class="moto-widget-divider-line">
+          </div>
+          <div class="moto-widget moto-widget-store-product-grid
+            moto-preset-default moto-spacing-top-small
+            moto-spacing-right-auto moto-spacing-bottom-auto
+            moto-spacing-left-auto ">
+            <div class="row">
+              <div class="col-lg-12">
+                <table id="dataTables-example" class="table table-striped
+                  table-bordered table-hover dataTable no-footer dtr-inline">
+                  <thead>
+                    <th class="sorting_asc">#</th>
+                    <th class="text-center"><%= t ".product_image" %></th>
+                    <th class="text-center"><%= t ".product_name" %></th>
+                    <th class="text-center"><%= t ".quantity" %></th>
+                    <th class="text-center"><%= t ".price" %></th>
+                    <th class="text-center"><%= t ".total_price" %></th>
+                    <th class="text-center"></th>
+                  </thead>
+                  <tbody>
+                    <% @order_items.each_with_index do |order_item, index| %>
+                      <tr>
+                        <td><%= index + 1 %></td>
+                        <td>
+                          <%= image_tag order_item.product.image,
+                            alt: order_item.product.name,
+                            class: "moto-widget-image-picture card-image" %>
+                        </td>
+                        <td class="text-center">
+                          <%= order_item.product.name %>
+                        </td>
+                        <td class="text-center"><%= order_item.quantity %></td>
+                        <td class="text-center"><%= order_item.price %></td>
+                        <td class="text-center">
+                          <%= order_item.quantity * order_item.price %>
+                        </td>
+                        <td class="text-center">
+                          <div class="moto-widget moto-widget-button
+                            moto-preset-3">
+                            <%= link_to root_path,
+                              class: "moto-widget-button-link
+                              moto-size-medium" do %>
+                              <%= t ".delete" %>
+                            <% end %>
+                          </div>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+                <%= paginate @order_items, theme: "twitter-bootstrap-3" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

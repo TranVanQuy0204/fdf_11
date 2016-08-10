@@ -19,7 +19,7 @@
           <div class="moto-widget moto-widget-divider moto-preset-default
             moto-align-center moto-spacing-top-small moto-spacing-right-auto
             moto-spacing-bottom-small moto-spacing-left-auto">
-              <hr class="moto-widget-divider-line"">
+              <hr class="moto-widget-divider-line">
           </div>
           <div class="moto-widget moto-widget-store-product-grid
             moto-preset-default moto-spacing-top-small
@@ -28,6 +28,8 @@
             <div class="row">
               <% @products.each do |product| %>
                 <div class="col-sm-3">
+                  <%= form_for [product, @order_item] do
+                    |f| %>
                   <div class="moto-widget-store-main_item
                     moto-widget-store-image-block moto-align-left">
                     <div class="moto-widget moto-widget-image moto-preset-4">
@@ -59,8 +61,11 @@
                       </div>
                       <div class="store-product-element-container
                         moto-widget-button moto-preset-default">
-                        <%= link_to root_path, title: t(".add_card"),
-                          class: "moto-widget-button-link moto-size-medium" do %>
+                        <%= f.hidden_field :product_id, value: product.id %>
+                        <%= f.hidden_field :quantity, value: 1 %>
+                        <%= f.button :submit,
+                          title: t(".add_card"), class: "moto-widget-button-link
+                          moto-size-medium" do %>
                           <span class="moto-widget-button-label">
                             <%= t ".add_card" %>
                           </span>
@@ -74,6 +79,7 @@
                       </fieldset>
                     </div>
                   </div>
+                  <% end %>
                 </div>
               <% end %>
             </div>
