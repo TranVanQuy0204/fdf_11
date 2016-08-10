@@ -27,9 +27,18 @@ body {
   line-height: 16px;
   margin: 0;
   min-width: 320px;
-  overflow: hidden;
   width: 100%;
 }
+a {
+  color: #337ab7;
+  text-decoration: none;
+  background-color: transparent;
+}
+img {
+  vertical-align: middle;
+  border: 0 none;
+}
+
 .edu-container_header_546f07b9 {
   border-color: #7ca877;
   border-radius: 0;
@@ -527,43 +536,43 @@ input, button, select, textarea {
 
 .edu-widget-store_search{
   .search-form_submit::before {
-    content: "";
+  content: "";
   }
 }
 .edu-widget.edu-widget-store_search{
-    .search-form_submit::before {
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    z-index: 2;
+  .search-form_submit::before {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 2;
   }
   .search-form_submit {
-    border-left: 0 none;
-    color: #000000;
-    cursor: pointer;
-    font-size: 24px;
-    height: 38px;
-    line-height: 50px;
-    right: 0;
-    text-align: center;
-    top: 0;
-    transition: all 0.3s ease 0s;
-    width: 44px;
+  border-left: 0 none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 24px;
+  height: 38px;
+  line-height: 50px;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease 0s;
+  width: 44px;
   }
 }
 .edu-widget-store_search{
   .search-form_submit {
-    color: #999999;
-    font: 400 18px/22px "FontAwesome",sans-serif;
-    height: 22px;
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    transition: all 0.3s ease 0s;
-    width: 25px;
+  color: #999999;
+  font: 400 18px/22px "FontAwesome",sans-serif;
+  height: 22px;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  transition: all 0.3s ease 0s;
+  width: 25px;
   }
 }
 .header-icon-size{
@@ -633,9 +642,335 @@ input, button, select, textarea {
   letter-spacing: 0;
   line-height: 1.2;
   a {
-    color: #7ca877;
-    font-style: normal;
-    font-weight: 400;
-    text-decoration: none;
+  color: #7ca877;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
   }
 }
+.moto-text_system_4 {
+  color: #604848;
+  font-family: "PT Sans",sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+.moto-color_custom5 {
+  color: #66a55f;
+}
+.moto-widget-divider {
+  .moto-widget-divider-line {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  }
+}
+.moto-widget-store-main_item {
+  font-family: "PT Sans",sans-serif;
+  margin-bottom: 40px;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .moto-widget-image {
+  margin-bottom: 0;
+}
+.moto-widget-store-main_item .moto-widget-image {
+  margin-bottom: 17px;
+}
+.moto-widget-image.moto-preset-4 .moto-widget-image-link::before {
+  background-color: transparent;
+  border-color: transparent;
+}
+.moto-widget-image.moto-preset-4 .moto-widget-image-link::before {
+  border: 5px solid;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.moto-widget-store-image-block .moto-widget-image-link::before {
+  border: 3px solid #fff;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.moto-widget-image .moto-widget-image-link::before, .moto-widget-image .moto-widget-image-link::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s linear 0s;
+}
+.moto-widget-image.moto-preset-4 .moto-widget-image-link::after {
+  color: #ffffff;
+}
+.moto-widget-image.moto-preset-4 .moto-widget-image-link::after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 50px;
+  left: 0;
+  line-height: 60px;
+  margin: 0 auto;
+  opacity: 0;
+  right: 0;
+  text-rendering: auto;
+  top: 50%;
+  transform: translateY(-300%);
+  z-index: 2;
+}
+.moto-widget-image .moto-widget-image-link::before, .moto-widget-image .moto-widget-image-link::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s linear 0s;
+}
+.moto-widget-image.moto-preset-4 .moto-widget-image-link {
+  border: medium none;
+  overflow: hidden;
+}
+.moto-widget-store-image-block .moto-widget-image-link {
+  border: 1px solid #c4c4c4;
+  color: #bababa;
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+.moto-widget-image .moto-widget-image-link {
+  position: relative;
+  text-align: center;
+  transition: all 0.3s linear 0s;
+}
+.moto-widget-image .moto-widget-image-link {
+  display: inline-block;
+}
+.moto-widget-image .moto-widget-image-link .moto-widget-image-picture {
+  transition: all 0.3s linear 0s;
+  will-change: transform;
+}
+.moto-widget-store-image-block .moto-widget-image-picture {
+  left: 50%;
+  max-height: 99%;
+  max-width: 99%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+.moto-widget-image .moto-widget-image-picture {
+  max-width: 100%;
+  width: 100%;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .moto-widget-image .moto-widget-store-main_item-label {
+  background: #ed1c24 none repeat scroll 0 0;
+  font: 700 14px/16px "PT Sans",sans-serif;
+  left: 0;
+  letter-spacing: 0.02em;
+  padding: 11px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 18px;
+}
+.moto-widget-store-main_item .moto-widget-image .moto-widget-store-main_item-label {
+  background: #ff7200 none repeat scroll 0 0;
+  color: #fff;
+  font-size: 30px;
+  left: 0;
+  padding: 4px 18px 6px 19px;
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+}
+.moto-widget-store-main_item-title {
+  color: #ff7200;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .moto-widget-store-main_item-title {
+  color: inherit;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.moto-text_system_14 {
+  color: #000000;
+  font-family: "PT Sans",sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.moto-widget-store-main_item .store-product-element-container {
+  display: inline-block;
+  vertical-align: top;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-price, .moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-old_price {
+  display: inline-block;
+  margin: 0;
+}
+.moto-widget-store-main_item-price {
+  color: #000;
+}
+.moto-text_system_13 {
+  color: #66a55f;
+  font-family: "PT Sans",sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-old_price {
+  color: rgba(153, 187, 149, 0.8);
+  font-size: 12px;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-price, .moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-old_price {
+  display: inline-block;
+  margin: 0;
+}
+.moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-old_price, .moto-widget-store-main_item .store-product-element-container .moto-widget-store-main_item-price {
+  margin-right: 10px;
+}
+.moto-widget-store-main_item-old_price {
+  color: #747474;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .store-product-element-container {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.moto-widget-store-main_item .store-product-element-container {
+  display: inline-block;
+  vertical-align: top;
+}
+.moto-widget-button.moto-preset-default .moto-widget-button-link {
+  background-color: #acd373;
+  border-color: #95c74d;
+  color: #ffffff;
+  font-family: "PT Sans",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.moto-widget-button.moto-preset-default .moto-widget-button-link {
+  border-bottom: 3px solid;
+  border-radius: 2px;
+  padding: 13px 35px 10px;
+  text-shadow: 0 3px 2px #8ab186;
+}
+.moto-widget-button .moto-widget-button-link.moto-size-medium {
+  font-size: 16px;
+}
+.moto-widget-button .moto-widget-button-link {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  z-index: 1;
+}
+.moto-widget-button .moto-widget-button-link {
+  cursor: pointer;
+  display: inline-block;
+}
+.moto-widget-button.moto-preset-default .moto-widget-button-link .moto-widget-button-label {
+  text-decoration: none;
+}
+.moto-widget-button .moto-widget-button-link .moto-widget-button-label {
+  position: relative;
+  z-index: 2;
+}
+.moto-widget-store-product-grid .moto-widget-store-main_item .moto-widget-store-main_item-title:hover span {
+  color: #7ca877;
+  transition: all .3s;
+}
+.view {
+  overflow: hidden;
+  position: relative;
+}
+.effect img {
+   opacity:1;
+   transform:scale(1,1);
+   transition: all 0.2s ease-in;
+   width: 100%;
+   height: 100%;
+}
+.effect .mask {
+   opacity:0;
+   overflow:visible;
+   border-color:rgba(0,0,0,0) transparent transparent transparent;
+   border-style:solid;
+   border-width:150px;
+   width:0;
+   height:0;
+   transform:translateY(-125px);
+   transition: transform 0.2s 0.1s ease-out, opacity 0.3s ease-in-out;
+}
+.effect:hover img {
+   opacity:0.7;
+   transform:scale(3,3);
+}
+.effect:hover .mask {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.effect:hover{
+  border-color: #7ca877 solid 5px;
+}
+.moto-widget-image.moto-preset-4 .moto-widget-image-link:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 5px solid;
+}
+.moto-widget-store-main_item-label{
+  background: #ed1c24
+}
+.moto-align-center {
+  text-align: center;
+}
+.moto-widget-divider-line{
+  width:16% !important
+}
+.rating {
+  border: none;
+  float: left;
+}
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+.rating > label {
+  color: #ddd;
+ float: right;
+}
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {color: #FFD700;}
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{color: #FFED85;}

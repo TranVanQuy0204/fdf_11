@@ -31,3 +31,16 @@ en:
       not_recieve_email: "Didn't receive confirmation instructions?"
       not_unlock: "Didn't receive unlock instructions?"
       authen_signup: "Sign in with"
+  messages:
+    error_load: "Don't find this element"
+  categories:
+    show:
+      add_card: "Add Card"
+      sales: "Sales"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
