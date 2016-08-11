@@ -104,13 +104,17 @@
                   <table class="table table-hover total-checkout">
                     <tbody>
                       <tr class="row">
-                        <td class="col-lg-6"><%= t ".total_items" %></td>
+                        <td class="col-lg-6">
+                          <strong><%= t ".total_items" %></strong>
+                        </td>
                         <td class="col-lg-6 text-right">
                           <%= current_order.number_items %> <%= t ".product" %>
                         </td>
                       </tr>
                       <tr class="row">
-                        <td class="col-lg-6"><%= t ".subtotal" %></td>
+                        <td class="col-lg-6">
+                          <strong><%= t ".subtotal" %></strong>
+                        </td>
                         <td class="col-lg-6 text-right">
                           <trong>
                             <%= number_to_currency current_order.total_price %>
@@ -122,11 +126,15 @@
                   </table>
                 </div>
                 <div class="row pull-right">
+                  <%= link_to root_path, class: "btn btn-danger" do %>
+                    <span class="fa fa-trash"></span>
+                    <%= t ".delete_order" %>
+                  <% end %>
                   <%= link_to root_path, class: "btn btn-default" do %>
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     <%= t ".continue" %>
                   <% end %>
-                  <%= link_to root_path, class: "btn btn-success" do %>
+                  <%= link_to checkouts_path, class: "btn btn-success" do %>
                     <%= t ".checkout" %>
                     <span class="glyphicon glyphicon-play"></span>
                   <% end %>

@@ -991,3 +991,46 @@ input, button, select, textarea {
   text-align: center;
   width: 30px;
 }
+.moto-spacing-left-auto{
+  padding-bottom: 10px;
+}
+.panel-green {
+    border-color: #5cb85c;
+}
+.panel-green > .panel-heading {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: #fff;
+}
+.panel-heading{
+  .edu-text_system_7 {
+      color: #ffffff;
+      font-family: "PT Sans",sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.2;
+  }
+  .fa{
+    font-size: 20px;
+  }
+}
+.product_name{
+  font-size: 20px;
+  font-weight: 400;
+}
+.checkout-action-items{
+  padding-top: 50px;
+}
+.table-checkout{
+  .row{
+    padding-bottom: 20px
+  }
+}
+.checkout-image{
+  max-width: 100px
+}
+.product_name{
+  text-transform: uppercase;
+}

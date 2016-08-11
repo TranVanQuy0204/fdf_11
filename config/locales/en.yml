@@ -55,12 +55,27 @@ en:
       product: "Product"
       continue: "Continue Shopping"
       checkout: "Checkout"
+      delete_order: "Delete this order"
     destroy:
       destroy_succes: "Destroy product %{value} succes"
       destroy_succes: "Destroy product %{value} errors"
     update:
       destroy_succes: "Update product %{value} succes"
       destroy_succes: "Update product %{value} errors"
+  checkouts:
+    index:
+      title: "Checkout"
+    items:
+      order: "Order Items"
+      delete_order: "Delete this order"
+      update: "Update"
+      delete: "Delete"
+      price: "Price: "
+    user:
+      title_user: "Step 1: Account information"
+      title_order: "Step 3: Order Confirmation"
+      email: "Email"
+      title_shipping: "Step 2: Shipping Address"
   views:
     pagination:
       first: "&laquo; First"
@@ -68,4 +83,3 @@ en:
       previous: "&lsaquo; Prev"
       next: "Next &rsaquo;"
       truncate: "&hellip;"
-
