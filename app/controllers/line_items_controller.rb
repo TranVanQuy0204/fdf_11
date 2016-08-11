@@ -3,7 +3,7 @@ class LineItemsController < ApplicationController
   def create
     @order = current_order
     @order_item = @order.line_items
-      .find_by(product_id: params[:line_item][:product_id])
+      .find_by product_id: params[:line_item][:product_id]
     if @order_item.nil?
       @order_item = @order.line_items.new order_item_params
     else
@@ -24,6 +24,33 @@ class LineItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @order = current_order
+    @order_item = @order.line_items.find params[:id]
+    name = @order_item.product.name
+    if @order_item.destroy!
+      flash[:success] = t ".destroy_succes", value: name
+      @order.save!
+      redirect_to carts_path
+    else
+      flash[:danger] = t ".destroy_error", value: name
+      redirect_to carts_path
+    end
+  end
+
+  def update
+    @order = current_order
+    @order_item = @order.line_items.find params[:id]
+    name = @order_item.product.name
+    if @order_item.update_attributes! order_item_params
+      flash[:success] = t ".update_succes", value: name
+      @order.save!
+      redirect_to carts_path
+    else
+      flash[:danger] = t ".update_error", value: name
+      redirect_to carts_path
+    end
+  end
   private
   def order_item_params
     params.require(:line_item).permit :quantity, :product_id
