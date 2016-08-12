@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   def show
     @products = @category.products.order_by_created_at
       .page_kimanari params[:page]
+    @order_item = current_order.line_items.new
   end
 
   private
