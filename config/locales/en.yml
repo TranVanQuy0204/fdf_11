@@ -44,3 +44,19 @@ en:
       user:
         delete: "Delete"
         edit: "Edit"
+    categories:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New category"
+        name: "Category Name"
+        image: "Image"
+        created_at: "Created At"
+      category:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      new:
+        title: "New category"
