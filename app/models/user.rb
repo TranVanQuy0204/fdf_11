@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
     :trackable, :validatable
   enum role: [:admin, :user]
+
   has_many :orders, dependent: :destroy
   has_many :activities, dependent: :destroy
   has_many :comments, dependent: :destroy
