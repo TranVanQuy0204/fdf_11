@@ -2,43 +2,51 @@
   <div class="sidebar-nav navbar-collapse">
     <ul id="side-menu" class="nav in">
       <li>
-        <%= link_to "#", class: "active" do %>
+        <%= link_to admin_root_path,
+          class: current_class?(admin_root_path)  do %>
           <i class="fa fa-dashboard fa-fw"></i>
           <%= t ".dashboard"  %>
         <% end %>
       </li>
       <li>
-        <%= link_to "#" do %>
-          <i class="fa fa-bar-chart-o fa-fw"></i>
+        <%= link_to admin_orders_path,
+          class: current_class?(admin_orders_path) do %>
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           <%= t ".order"  %>
+          <span class="badge pull-right label-danger">7</span>
         <% end %>
       </li>
       <li>
-        <%= link_to admin_categories_path do %>
-          <i class="fa fa-bar-chart-o fa-fw"></i>
+        <%= link_to admin_categories_path,
+          class: current_class?(admin_categories_path) do %>
+          <i class="fa fa-bars" aria-hidden="true"></i>
           <%= t ".category"  %>
         <% end %>
       </li>
       <li>
-        <%= link_to admin_products_path do %>
-          <i class="fa fa-bar-chart-o fa-fw"></i>
+        <%= link_to admin_products_path,
+          class: current_class?(admin_products_path) do %>
+          <i class="fa fa-gift" aria-hidden="true"></i>
           <%= t ".product"  %>
         <% end %>
       </li>
       <li>
-        <%= link_to admin_users_path do %>
-          <i class="fa fa-bar-chart-o fa-fw"></i>
+        <%= link_to admin_users_path,
+          class: current_class?(admin_users_path) do %>
+          <i class="fa fa-users" aria-hidden="true"></i>
           <%= t ".user"  %>
         <% end %>
       </li>
       <li>
-        <%= link_to "#" do %>
-          <i class="fa fa-bar-chart-o fa-fw"></i>
+        <%= link_to "#",
+          class: current_class?("#") do %>
+          <i class="fa fa-history" aria-hidden="true"></i>
           <%= t ".history"  %>
         <% end %>
       </li>
       <li>
-        <%= link_to "#" do %>
+        <%= link_to "#",
+          class: current_class?("#") do %>
           <i class="fa fa-bar-chart-o fa-fw"></i>
           <%= t ".suggest"  %>
         <% end %>

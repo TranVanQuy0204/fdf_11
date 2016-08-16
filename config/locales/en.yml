@@ -78,3 +78,44 @@ en:
         title: "New product"
       show:
         title: "Update product"
+        products:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New product"
+        name: "Product Name"
+        image: "Image"
+        created_at: "Created At"
+      product:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      new:
+        title: "New product"
+      show:
+        title: "Update product"
+    orders:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New product"
+        name: "User Name"
+        created_at: "Created At"
+      order:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      show:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        delete: "Cancel"
+        name: "User Name"
+        created_at: "Created At"
+        confirm: "Are you cancel this order?"
+        confirm_finish: "Are you finish this order?"
