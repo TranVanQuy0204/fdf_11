@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root "pages#index"
     resources :users
     resources :categories
+    resources :products
   end
 
   root "pages#index"

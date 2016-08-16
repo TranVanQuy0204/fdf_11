@@ -60,3 +60,21 @@ en:
         confirm: "Are you delete?"
       new:
         title: "New category"
+    products:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New product"
+        name: "Product Name"
+        image: "Image"
+        created_at: "Created At"
+      product:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      new:
+        title: "New product"
+      show:
+        title: "Update product"

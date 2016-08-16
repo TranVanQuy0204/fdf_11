@@ -3,7 +3,8 @@ class Category < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   validates :name, presence: true, length: {minimum: 6}
-  validates :description, presence: true, length: {maximum: 255}
+  validates :description, length: {maximum: 255}
+
   def self.to_csv options = {}
     CSV.generate options do |csv|
       csv << column_names
