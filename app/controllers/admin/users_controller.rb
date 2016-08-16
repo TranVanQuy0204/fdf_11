@@ -1,4 +1,6 @@
 class Admin::UsersController < AdminController
+  load_and_authorize_resource
+
   def index
     @search = User.search params[:q]
     @users = @search.result.page_kimanari(params[:page_kimanari])
@@ -11,7 +13,6 @@ class Admin::UsersController < AdminController
   end
 
   def destroy
-    @user = User.find_by id: params[:id]
     if @user.destroy
       flash[:success] = t ".success"
     else
@@ -21,11 +22,9 @@ class Admin::UsersController < AdminController
   end
 
   def new
-    @user = User.new
   end
 
   def create
-    @user = User.new user_params
     if @user.save
       flash[:success] = t "messages.create_success"
       redirect_to admin_users_path
@@ -35,7 +34,6 @@ class Admin::UsersController < AdminController
   end
 
   def update
-    @user = User.find_by id: params[:id]
     if @user.update_attributes user_params
       flash[:success] = t "messages.update_success"
       redirect_to admin_users_path
@@ -45,7 +43,6 @@ class Admin::UsersController < AdminController
   end
 
   def show
-    @user = User.find_by id: params[:id]
   end
   private
   def user_params

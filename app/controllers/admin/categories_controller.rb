@@ -1,4 +1,5 @@
 class Admin::CategoriesController < AdminController
+  load_and_authorize_resource
 
   def index
     @search = Category.search params[:q]

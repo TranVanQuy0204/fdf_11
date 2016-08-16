@@ -9,7 +9,7 @@ class Ability
     when :user
       can :read, :all
     else
-      can :read, :all
+      can :manage, :all
     end
   end
 end

@@ -34,6 +34,9 @@ en:
       not_recieve_email: "Didn't receive confirmation instructions?"
       not_unlock: "Didn't receive unlock instructions?"
       authen_signup: "Sign in with"
+  messages:
+    update_success: "Update success"
+    admin_login : "You can't go to manage page"
   admin:
     users:
       index:
@@ -46,6 +49,7 @@ en:
         edit: "Edit"
     categories:
       index:
+        title: "Categories"
         search: "Search"
         no_record: "No Record"
         export_csv: "Export CSV"
@@ -62,6 +66,7 @@ en:
         title: "New category"
     products:
       index:
+        title: "Products"
         search: "Search"
         no_record: "No Record"
         export_csv: "Export CSV"
@@ -98,6 +103,7 @@ en:
         title: "Update product"
     orders:
       index:
+        title: "Orders"
         search: "Search"
         no_record: "No Record"
         export_csv: "Export CSV"

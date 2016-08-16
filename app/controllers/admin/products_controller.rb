@@ -1,4 +1,6 @@
 class Admin::ProductsController < AdminController
+  load_and_authorize_resource
+
   def index
     @search = Product.search params[:q]
     @products = @search.result.page_kimanari(params[:page_kimanari])

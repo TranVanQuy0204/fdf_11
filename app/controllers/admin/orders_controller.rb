@@ -1,4 +1,6 @@
 class Admin::OrdersController < AdminController
+  load_and_authorize_resource
+
   def index
     @search = Order.search params[:q]
     @orders = @search.result.select_user.page_kimanari(params[:page_kimanari])
