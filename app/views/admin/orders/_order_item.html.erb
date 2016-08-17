@@ -1,0 +1,18 @@
+<tr>
+  <td><%= order_item_counter + 1 %></td>
+  <td>
+    <%= order_item.name %>
+  </td>
+  <td>
+    <%= image_tag order_item.image, alt: order_item.name,
+      class: "moto-widget-image-picture card-image" %>
+  </td>
+  <td><%= order_item.quantity %></td>
+  <td><%= number_to_currency order_item.price %></td>
+  <td>
+    <%= I18n.localize order_item.created_at, format: :default %>
+  </td>
+  <td class="text-center">
+    <%= number_to_currency order_item.total_price %>
+  </td>
+</tr>
