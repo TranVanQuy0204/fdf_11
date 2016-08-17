@@ -1,0 +1,27 @@
+<%= simple_form_for [:admin, @category], html: {multipart: true} do |f| %>
+  <%= f.input :name %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+      <div class="col-xs-6">
+        <% unless @category.image.blank? %>
+          <%= image_tag @category.image, class: "image-size",
+          alt: @category.name %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= f.input :parent_code, label: t(".parent") do %>
+    <%= f.select :parent_code, @categories.map{|r| [r.name, r.id]},
+      include_blank: true %>
+  <% end %>
+  <div class="form-group">
+    <%= f.cktext_area :description %>
+  </div>
+  <%= f.button :submit, class: "btn-primary" do %>
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  <% end %>
+<% end %>
