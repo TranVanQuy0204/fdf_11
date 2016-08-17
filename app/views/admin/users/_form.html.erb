@@ -1,0 +1,14 @@
+<%= simple_form_for [:admin, @user] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <% if @user.id.nil? %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation, label: false %>
+  <% end %>
+  <%= f.input :role do %>
+    <%= f.select :role, %w(user admin) %>
+  <% end %>
+  <%= f.button :submit, class: "btn-primary" do %>
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  <% end %>
+<% end %>
