@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <button data-target=".navbar-collapse" data-toggle="collapse"
+      class="navbar-toggle" type="button">
+      <span class="sr-only"><%= t ".toggle_navigation" %></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to admin_root_path, class: "navbar-brand" do %>
+      <%= t "app_name" %>
+    <% end %>
+  </div>
+  <ul class="nav navbar-top-links navbar-right">
+    <li class="dropdown">
+      <%= link_to "#", class: "dropdown-toggle", data: {toggle: :dropdown},
+        aria: {expanded: :true} do %>
+        <i class="fa fa-user fa-fw"></i>
+        <i class="fa fa-caret-down"></i>
+      <% end %>
+      <ul class="dropdown-menu dropdown-user">
+        <li>
+          <%= link_to admin_users_path do %>
+            <i class="fa fa-user fa-fw"></i>
+            <%= t ".user_profile" %>
+          <% end %>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-sign-out fa-fw"></i>
+            <%= t ".logout" %>
+          <% end %>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <%= render "layouts/admin/menu" %>
+</nav>
