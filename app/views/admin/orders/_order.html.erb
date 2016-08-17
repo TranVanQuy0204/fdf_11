@@ -1,0 +1,19 @@
+<tr class="gradeA odd" role="row">
+  <td class="sorting_1"><%= order_counter + 1 %></td>
+  <td class="sorting_1"><%= order.code %></td>
+  <td class="sorting_1"><%= order.name %></td>
+  <td class="sorting_1"><%= order.number_items %></td>
+  <td class="sorting_1"><%= number_to_currency order.total_price %></td>
+  <td class="sorting_1"><%= order.ship_address %></td>
+  <td class="sorting_1">
+    <span class="label label-<%= order.status %>"><%= order.status %></td></span>
+  <td class="sorting_1">
+    <%= I18n.localize order.created_at, format: :default %>
+  </td>
+  <td class="sorting_1">
+    <%= link_to [:admin, order], class: "btn btn-warning btn-circle",
+      title: t(".edit"), data: {"no-turbolink": :true} do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+  </td>
+</tr>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">id</Data></Cell>
+        <Cell><Data ss:Type="String">code</Data></Cell>
+        <Cell><Data ss:Type="String">status</Data></Cell>
+        <Cell><Data ss:Type="String">number_items</Data></Cell>
+        <Cell><Data ss:Type="String">total_price</Data></Cell>
+        <Cell><Data ss:Type="String">ship_address</Data></Cell>
+        <Cell><Data ss:Type="String">user_id</Data></Cell>
+        <Cell><Data ss:Type="String">created_at</Data></Cell>
+        <Cell><Data ss:Type="String">updated_at</Data></Cell>
+      </Row>
+    <% @orders.each do |object| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= object.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.status %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.number_items %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.total_price %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.ship_address %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.user_id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.created_at %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= object.updated_at %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
