@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include PublicActivity::Model
-  tracked
+  # tracked owner_id: Proc.new{ |controller, model| controller.current_user }
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
     :trackable, :validatable
   enum role: [:admin, :user]
