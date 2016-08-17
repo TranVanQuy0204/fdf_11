@@ -1,0 +1,108 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@font-face {
+  font-family: Playball;
+  src: url(../app/fonts/Playball.ttf);
+}
+@font-face {
+  font-family: PT-SAN;
+  src: url(../app/fonts/PTS56F.ttf);
+}
+body {
+  background-color: #f8f8f8;
+}
+.navbar-top-links{
+  li{
+  a{
+    min-height: 50px;
+    padding: 15px;
+  }
+  }
+}
+.sidebar {
+  margin-top: 51px;
+  position: absolute;
+  width: 250px;
+  z-index: 1;
+}
+.sidebar .sidebar-nav.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+.sidebar{
+  ul{
+  li{
+    a.active {
+    background-color: #eee;
+    }
+  }
+  }
+}
+#page-wrapper {
+  border-left: 1px solid #e7e7e7;
+  margin: 0 0 0 250px;
+  padding: 0 30px;
+  position: inherit;
+  background-color: #fff;
+  min-height: 568px;
+  padding: 0 15px;
+}
+#wrapper {
+  width: 100%;
+}
+.navbar-brand{
+  color: #604848;
+  font-family: "Playball",display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  background-image: asset_url("images/title_logo.png");
+}
+#page-wrapper {
+    border-left: 1px solid #e7e7e7;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    position: inherit;
+}
+.search-param{
+  padding: 10px 0px;
+}
+.btn-circle {
+    border-radius: 15px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 1.42857;
+    padding: 6px 0;
+    text-align: center;
+    width: 30px;
+}
+.image-size{
+  max-width: 100px;
+  max-height: 100px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.label-new_order{
+  background-color: #337ab7;
+}
+.label-pendding{
+  background-color: #f0ad4e;
+}
+.label-success{
+  background-color: #5cb85c;
+}
+.label-cancle{
+  background-color: #d9534f;
+}
+.search-param{
+  margin-bottom: 20px;
+}
+.label-danger{
+  background-color: #d9534f;
+}
+.row-message{
+  padding-top: 10px;
+}
