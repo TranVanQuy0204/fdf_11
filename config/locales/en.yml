@@ -4,6 +4,9 @@ en:
   title: "Eat only natural food"
   call_us: "Call us at"
   phone: "0902004984"
+  time:
+    formats:
+      default: "%d %b %Y %H:%M:%S"
   messages:
     error_load: "Don't find this element"
   categories:
@@ -52,3 +55,91 @@ en:
       previous: "&lsaquo; Prev"
       next: "Next &rsaquo;"
       truncate: "&hellip;"
+  admin:
+    users:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+      user:
+        delete: "Delete"
+        edit: "Edit"
+    categories:
+      index:
+        title: "Categories"
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New category"
+        name: "Category Name"
+        image: "Image"
+        created_at: "Created At"
+      category:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      new:
+        title: "New category"
+    products:
+      index:
+        title: "Products"
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New product"
+        name: "Product Name"
+        image: "Image"
+        created_at: "Created At"
+      product:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      new:
+        title: "New product"
+      show:
+        title: "Update product"
+        products:
+      index:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New product"
+        name: "Product Name"
+        image: "Image"
+        created_at: "Created At"
+      product:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      new:
+        title: "New product"
+      show:
+        title: "Update product"
+    orders:
+      index:
+        title: "Orders"
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        new: "New product"
+        name: "User Name"
+        created_at: "Created At"
+      order:
+        delete: "Delete"
+        edit: "Edit"
+        confirm: "Are you delete?"
+      show:
+        search: "Search"
+        no_record: "No Record"
+        export_csv: "Export CSV"
+        export_xls: "Export XLS"
+        delete: "Cancel"
+        name: "User Name"
+        created_at: "Created At"
+        confirm: "Are you cancel this order?"
+        confirm_finish: "Are you finish this order?"

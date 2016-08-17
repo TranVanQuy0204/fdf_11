@@ -22,6 +22,13 @@ gem "json"
 gem "omniauth-facebook"
 gem "figaro"
 gem "omniauth-twitter"
+gem "cancancan", "~> 1.10"
+gem "ransack"
+gem "simple_form"
+gem "ckeditor"
+gem "carrierwave", "0.10.0"
+gem "mini_magick", "3.8.0"
+gem "fog", "1.36.0"
 group :development, :test do
   gem "byebug"
 end

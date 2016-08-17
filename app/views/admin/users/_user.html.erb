@@ -1,0 +1,19 @@
+<tr class="gradeA odd" role="row">
+  <td class="sorting_1"><%= user_counter + 1 %></td>
+  <td class="sorting_1"><%= user.name %></td>
+  <td class="sorting_1"><%= user.email %></td>
+  <td class="sorting_1"><%= user.role %></td>
+  <td class="sorting_1">
+    <%= I18n.localize user.created_at, format: :default %>
+  </td>
+  <td class="sorting_1">
+    <%= link_to [:admin, user], class: "btn btn-warning btn-circle",
+      title: t(".edit") do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to [:admin, user], class: "btn btn-danger btn-circle",
+      title: t(".delete"), method: :delete do %>
+      <i class="fa fa-times"></i>
+    <% end %>
+  </td>
+</tr>
