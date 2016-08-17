@@ -16,6 +16,10 @@ en:
   messages:
     update_success: "Update success"
     admin_login : "You can't go to manage page"
+  products:
+    show:
+      add_card: "Add Card"
+      sales: "Sales"
   devise:
     sessions:
       new:
