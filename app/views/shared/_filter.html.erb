@@ -1,0 +1,33 @@
+<div class="clear-fix"></div>
+<section id="section-content" class="content page-29 moto-section">
+  <div class="moto-widget moto-widget-row row-fixed">
+    <div class="container-fluid">
+      <div class="row filter-style">
+        <div class="col-sm-12">
+          <%= search_form_for @search, url: filter_products_path do |f| %>
+            <div class="col-sm-3">
+              <%= f.label :name %>
+              <%= f.text_field :name_cont, class: "string optional
+                form-control" %>
+            </div>
+            <div class="col-sm-3">
+              <%= f.label :price_gteq, t(".between") %>
+              <%= f.text_field :price_gteq, class: "string optional
+                form-control" %>
+            </div>
+            <div class="col-sm-3">
+              <%= f.label :price_lteq, t(".and") %>
+              <%= f.text_field :price_lteq, class: "string optional
+                form-control" %>
+            </div>
+            <div class="col-sm-3">
+              <br/>
+              <%= f.submit t(".search"),
+                class: "btn btn-default btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
