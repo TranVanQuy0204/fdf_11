@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   get "/auth/:provider/callback", to: "authenticate#create"
   resources :customer
+  resources :filter_products, only: :index
   namespace :admin do
     root "pages#index"
     resources :users
