@@ -1,0 +1,65 @@
+<div class="clear-fix"></div>
+<section id="section-content" class="content page-29 moto-section">
+  <div class="moto-widget moto-widget-row row-fixed">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="moto-cell col-sm-12">
+          <div class="moto-widget moto-widget-text moto-preset-default
+            moto-spacing-top-large moto-spacing-right-auto
+            moto-spacing-bottom-auto moto-spacing-left-auto">
+              <div class="moto-widget-text-content moto-widget-text-editable">
+                <p class="moto-text_system_4 text-center">
+                  <span class="moto-color_custom5">
+                    <%= @user.name %>
+                  </span>
+                </p>
+              </div>
+          </div>
+          <div class="moto-widget moto-widget-divider moto-preset-default
+            moto-align-center moto-spacing-top-small moto-spacing-right-auto
+            moto-spacing-bottom-small moto-spacing-left-auto">
+              <hr class="moto-widget-divider-line">
+          </div>
+          <div class="moto-widget moto-widget-store-product-grid
+            moto-preset-default moto-spacing-top-small
+            moto-spacing-right-auto moto-spacing-bottom-auto
+            moto-spacing-left-auto ">
+            <div class="row">
+              <div class="col-xs-3">
+                <div class="navbar-default sidebar" role="navigation">
+                  <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav in" id="side-menu">
+                      <li>
+                        <%= link_to customer_index_path,
+                          class: current_class?(customer_index_path) do %>
+                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                          <%= t ".order" %>
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to "#",
+                          class: current_class?("#") do %>
+                          <i class="fa fa-history" aria-hidden="true"></i>
+                          <%= t ".history" %>
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to edit_user_password_path(@user),
+                          class: current_class?(edit_user_password_path) do %>
+                          <%= t ".profile" %>
+                        <% end %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-9">
+                <%= render "customer" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

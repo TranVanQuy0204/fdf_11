@@ -13,6 +13,22 @@ en:
     show:
       add_card: "Add Card"
       sales: "Sales"
+  customer:
+    index:
+    order:
+      delete: "Delete"
+      edit: "Edit"
+      confirm: "Are you delete?"
+    customer:
+      title: "Orders"
+      search: "Search"
+      no_record: "No Record"
+      export_csv: "Export CSV"
+      export_xls: "Export XLS"
+      new: "New product"
+      name: "User Name"
+      created_at: "Created At"
+      code: "Code"
   devise:
     sessions:
       new:
