@@ -1111,6 +1111,7 @@ input, button, select, textarea {
 .row-message{
   padding-top: 20px
 }
+<<<<<<< HEAD
 .show-product{
   border: 3px solid #000000;
 }
@@ -1133,4 +1134,27 @@ input, button, select, textarea {
   font-size: 20px;
   color:#604848;
   font-weight: 700
+.label-new_order{
+  background-color: #337ab7;
+}
+.label-pendding{
+  background-color: #f0ad4e;
+}
+.label-success{
+  background-color: #5cb85c;
+}
+.label-cancle{
+  background-color: #d9534f;
+}
+.search-param{
+  margin-bottom: 20px;
+}
+.label-danger{
+  background-color: #d9534f;
+}
+.row-message{
+  padding-top: 10px;
+}
+.label-in_progress{
+  background-color: #337ab7;
 }
