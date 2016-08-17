@@ -22,6 +22,7 @@ gem "json"
 gem "omniauth-facebook"
 gem "figaro"
 gem "omniauth-twitter"
+gem "cancancan", "~> 1.10"
 group :development, :test do
   gem "byebug"
 end
