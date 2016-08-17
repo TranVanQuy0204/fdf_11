@@ -1,0 +1,66 @@
+<div class="clear-fix"></div>
+<section id="section-content" class="content page-29 moto-section">
+  <div class="moto-widget moto-widget-row row-fixed">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="moto-cell col-sm-12">
+          <div class="moto-widget moto-widget-text moto-preset-default
+            moto-spacing-top-large moto-spacing-right-auto
+            moto-spacing-bottom-auto moto-spacing-left-auto">
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="view effect show-product">
+                  <%= image_tag @product.image, alt: @product.name,
+                    class: "moto-widget-image-picture" %>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <div class="moto-widget-text-content moto-widget-text-editable">
+                  <p class="moto-text_system_4">
+                    <%= @product.name.capitalize %>
+                  </p>
+                  <h4 class="moto-color_custom5 edu-show-price">
+                    <%= number_to_currency @product.price %>
+                  </h4>
+                  <div class="row product-description">
+                    <div class="col-xs-12">
+                      <p class="product-description-title">
+                        <%= t ".description" %>
+                      </p>
+                      <span class="text"><%= @product.description %></span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <%= form_for [@product, @order_item] do |f| %>
+                      <div class="col-xs-2 form-group">
+                        <span class="edu-quantity"><%= t ".quantity" %></span>
+                      </div>
+                      <div class="col-xs-2 form-group">
+                        <%= f.hidden_field :product_id, value: @product.id %>
+                        <%= f.number_field :quantity, value: 1,
+                          class: "number form-control" %>
+                      </div>
+                      <div class="col-xs-6 col-xs-offset-2">
+                        <div class="store-product-element-container
+                          moto-widget-button moto-preset-default">
+                          <%= f.button :submit, title: t(".add_card"),
+                            class: "moto-widget-button-link
+                            moto-size-medium" do %>
+                            <span class="moto-widget-button-label">
+                              <%= t ".add_card" %>
+                            </span>
+                          <% end %>
+                        </div>
+                      </div>
+                    <% end %>
+                  </div>
+                  <hr/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

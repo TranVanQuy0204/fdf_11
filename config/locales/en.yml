@@ -13,6 +13,10 @@ en:
     show:
       add_card: "Add Card"
       sales: "Sales"
+  products:
+    show:
+      add_card: "Add Card"
+      sales: "Sales"
   devise:
     sessions:
       new:

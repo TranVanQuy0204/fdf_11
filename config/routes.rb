@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :categories, only: :show
   resource :carts, only: :show
-  resources :products do
+  resources :products, only: [:show] do
     resources :line_items, only: [:create, :destroy, :update]
   end
   get "/auth/:provider/callback", to: "authenticate#create"

@@ -26,7 +26,9 @@ class LineItemsController < ApplicationController
 
   def update_item
     quantity = params[:line_item][:quantity].to_i + @order_item.quantity
-    @order_item.update_attributes! quantity: quantity
+    unless @order_item.update_attributes quantity: quantity
+      flash[:danger] = t ".update_error"
+    end
   end
 
   def new_item

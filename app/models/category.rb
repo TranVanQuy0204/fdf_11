@@ -3,6 +3,7 @@ class Category < ActiveRecord::Base
 
   validates :name, presence: true, length: {minimum: 1}
   validates :description, length: {maximum: 255}
+  has_many :products
 
   class << self
     def to_csv options = {}
