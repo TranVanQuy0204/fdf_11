@@ -4,39 +4,47 @@ en:
   title: "Eat only natural food"
   call_us: "Call us at"
   phone: "0902004984"
-  devise:
-    confirmations:
-      confirmation_title: "Resend confirmation instructions"
-      confirmation_btn: "Resend confirmation instructions"
-    registrations:
-      new:
-        title: "Sign Up"
-        signup_btn: "Sign up"
-        min_characters: "characters minimum"
-      edit:
-        title: "Edit"
-        update_btn: "Update"
-        cancel_btn: "Cancel my account"
-        cancel_title: "Cancel my account"
-        confirm_cancel_msg: "Are you sure?"
-        back_btn: "Back"
-        edit_pass_msg: "(leave blank if you don't want to change it)"
-        min_characters: "characters minimum"
-        confirm_msg: "(we need your current password to confirm your changes)"
-        wait_msg: "Currently waiting confirmation for: "
-    shared:
-      login_link: "Login"
-      signup_link: "Sign up"
-      forgot_passowrd: "Forgot your password?"
-      not_recieve_email: "Didn't receive confirmation instructions?"
-      not_unlock: "Didn't receive unlock instructions?"
-      authen_signup: "Sign in with"
   messages:
     error_load: "Don't find this element"
   categories:
     show:
       add_card: "Add Card"
       sales: "Sales"
+  devise:
+    sessions:
+      new:
+        login: "Log in"
+        email: "Email"
+        password: "Password"
+    shared:
+      links:
+        login: "Log in"
+        sign_up: "Sign up"
+        forgot: "Forgot your password?"
+        confirmation: "Didn't receive confirmation instructions?"
+        receive: "Didn't receive unlock instructions?"
+        sign: "Sign in with %{value}"
+    registrations:
+      new:
+        sign: "Sign Up"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirmation password"
+      edit:
+        title: "Edit"
+        waiting: "Currently waiting confirmation for: "
+        message_password: "(leave blank if you don't want to change it)"
+        cancel: "Cancel my account"
+        update: "Update"
+        confirm: "Are you sure?"
+        password_confirmation: "Confirmation password"
+        email: "Email"
+        password: "Password"
+    passwords:
+      new:
+        email: "Email"
+        send: "Send"
+        btn_submit: "Send me reset password instructions"
   views:
     pagination:
       first: "&laquo; First"

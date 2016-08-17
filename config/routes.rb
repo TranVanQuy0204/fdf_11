@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :products do
     resources :line_items, only: [:create, :destroy, :update]
   end
+  get "/auth/:provider/callback", to: "authenticate#create"
 end

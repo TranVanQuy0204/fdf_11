@@ -16,6 +16,12 @@ gem "devise"
 gem "will_paginate"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "json"
+gem "omniauth-facebook"
+gem "figaro"
+gem "omniauth-twitter"
 group :development, :test do
   gem "byebug"
 end
