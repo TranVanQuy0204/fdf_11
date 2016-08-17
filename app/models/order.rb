@@ -1,7 +1,13 @@
 class Order < ActiveRecord::Base
+<<<<<<< HEAD
   enum status: [:new_order, :pendding, :success, :cancel]
 
   scope :with_user, -> {joins(:user).select "orders.*", "users.name"}
+=======
+  enum status: [:new_order, :pendding, :success, :cancle]
+
+  scope :get_user, -> {joins(:user).select "orders.*", "users.name"}
+>>>>>>> admin-manage-order
 
   belongs_to :user
   has_many :line_items, dependent: :destroy

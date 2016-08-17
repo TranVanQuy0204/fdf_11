@@ -36,6 +36,9 @@ en:
       name: "User Name"
       created_at: "Created At"
       code: "Code"
+  messages:
+    update_success: "Update success"
+    admin_login : "You can't go to manage page"
   devise:
     sessions:
       new:

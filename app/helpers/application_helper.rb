@@ -10,6 +10,8 @@ module ApplicationHelper
     room_id = ChatWork::Me.get["room_id"]
     message_body = "[To:#{account_id}] #{name} Well done!"
     ChatWork::Message.create room_id: room_id, body: message_body
+  end
+
   def showmenu
     categories = Category.all
     categories = categories.to_a
