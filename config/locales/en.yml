@@ -46,6 +46,15 @@ en:
     product:
       add_card: "Add Card"
       sales: "Sales"
+  filter_products:
+    index:
+      add_card: "Add Card"
+      sales: "Sales"
+  shared:
+    filter:
+      search: "Search"
+      between: "Price between"
+      name: "Product name"
   devise:
     sessions:
       new:
