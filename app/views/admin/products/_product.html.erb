@@ -1,0 +1,22 @@
+<tr class="gradeA odd" role="row">
+  <td class="sorting_1"><%= product_counter + 1 %></td>
+  <td class="sorting_1"><%= product.name %></td>
+  <td class="sorting_1">
+    <%= image_tag product.image, class: "image-size", alt: product.name %>
+  </td>
+  <td class="sorting_1"><%= product.price %></td>
+  <td class="sorting_1"><%= product.total %></td>
+  <td class="sorting_1">
+    <%= I18n.localize product.created_at, format: :default %>
+  </td>
+  <td class="sorting_1">
+    <%= link_to [:admin, product], class: "btn btn-warning btn-circle",
+      title: t(".edit"), data: {"no-turbolink": :true} do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to [:admin, product], class: "btn btn-danger btn-circle",
+      title: t(".delete"), method: :delete, data: {confirm: t(".confirm")} do %>
+      <i class="fa fa-times"></i>
+    <% end %>
+  </td>
+</tr>
