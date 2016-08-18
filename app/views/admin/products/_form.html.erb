@@ -1,0 +1,36 @@
+<%= simple_form_for [:admin, @product], html: {multipart: true}  do |f| %>
+  <%= f.input :name %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+      <div class="col-xs-6">
+        <% unless @product.image.blank? %>
+          <%= image_tag @product.image, class: "image-size", alt: @product.name %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-3">
+        <%= f.input :price %>
+      </div>
+      <div class="col-xs-3 col-xs-offset-3">
+        <%= f.input :total %>
+      </div>
+    </div>
+  </div>
+  <%= f.input :category_id, label: t(".category") do %>
+    <%= f.select :category_id,
+      Category.all.map{|r| [r.name, r.id]}, include_blank: true %>
+  <% end %>
+  <div class="form-group">
+    <%= f.cktext_area :description %>
+  </div>
+  <%= f.button :submit, class: "btn-primary" do %>
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  <% end %>
+<% end %>
