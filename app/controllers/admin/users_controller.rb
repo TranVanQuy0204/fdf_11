@@ -1,6 +1,7 @@
 class Admin::UsersController < AdminController
   load_and_authorize_resource
 
+
   def index
     @search = User.search params[:q]
     @users = @search.result.page_kimanari(params[:page])

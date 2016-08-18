@@ -2,8 +2,8 @@ class CustomerController < ApplicationController
 
   def index
     @user = current_user
-    @search = @user.orders.search params[:q]
-    @orders = @search.result.page_kimanari(params[:page])
+    @search_user = @user.orders.search params[:q]
+    @orders = @search_user.result.page_kimanari(params[:page])
       .per params[:limit]
     respond_to do |format|
       format.html

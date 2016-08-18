@@ -4,6 +4,14 @@ en:
   title: "Eat only natural food"
   call_us: "Call us at"
   phone: "0902004984"
+  number:
+    currency:
+      format:
+        unit: "$"
+        delimiter: ","
+        separator: "."
+        precision: 2
+        format: "%u%n"
   time:
     formats:
       default: "%d %b %Y %H:%M:%S"
@@ -55,6 +63,22 @@ en:
       search: "Search"
       between: "Price between"
       name: "Product name"
+  checkouts:
+    index:
+      title: "Checkout"
+    items:
+      order: "Order Items"
+      delete_order: "Delete this order"
+      update: "Update"
+      delete: "Delete"
+      price: "Price: "
+    checkout:
+      title_order: "Step 2: Order Confirmation"
+      address: "Address"
+      title_shipping: "Step 1: Shipping Address"
+    address:
+      title_shipping: "Step 1: Shipping Address"
+      address: "Address"
   devise:
     sessions:
       new:
@@ -90,6 +114,29 @@ en:
         email: "Email"
         send: "Send"
         btn_submit: "Send me reset password instructions"
+  carts:
+    index:
+      delete: "Delete"
+      update: "Update"
+      subtotal: "Subtotal"
+      total_items: "Total items"
+      product: "Product"
+      continue: "Continue Shopping"
+      checkout: "Checkout"
+    order_item:
+      delete: "Delete"
+      update: "Update"
+      subtotal: "Subtotal"
+      total_items: "Total items"
+      product: "Product"
+      continue: "Continue Shopping"
+      checkout: "Checkout"
+    destroy:
+      destroy_succes: "Destroy product %{value} succes"
+      destroy_succes: "Destroy product %{value} errors"
+    update:
+      destroy_succes: "Update product %{value} succes"
+      destroy_succes: "Update product %{value} errors"
   views:
     pagination:
       first: "&laquo; First"

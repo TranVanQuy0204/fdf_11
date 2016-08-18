@@ -121,12 +121,14 @@
               edu-spacing-bottom-auto edu-spacing-left-auto ">
               <ul class="edu-widget-store_cart_and_profile-container">
                 <li class="edu-widget-store_cart_and_profile-item">
-                  <%= link_to root_path,
+                  <%= link_to carts_path,
                     class: "edu-widget-store_cart_and_profile-link" do %>
                     <i class="fa fa-shopping-cart"></i>
                     <span class="edu-widget-store_cart_and_profile-text
                       edu-text_system_10">
-                        (<span class="ng-binding">0</span>)
+                        (<span class="ng-binding">
+                        <%= current_order.present? ? 0 : current_order.count %>
+                        </span>)
                     </span>
                   <% end %>
                 </li>

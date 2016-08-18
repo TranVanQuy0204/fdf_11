@@ -22,8 +22,9 @@
             </div>
             <div class="col-sm-3">
               <br/>
-              <%= f.submit t(".search"),
-                class: "btn btn-default btn-primary" %>
+              <%= f.submit t(".search"), class: "btn btn-default" do %>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              <% end %>
             </div>
           <% end %>
         </div>

@@ -1,13 +1,7 @@
 class Order < ActiveRecord::Base
-<<<<<<< HEAD
   enum status: [:new_order, :pendding, :success, :cancel]
 
   scope :with_user, -> {joins(:user).select "orders.*", "users.name"}
-=======
-  enum status: [:new_order, :pendding, :success, :cancle]
-
-  scope :get_user, -> {joins(:user).select "orders.*", "users.name"}
->>>>>>> admin-manage-order
 
   scope :group_by_date, -> {group "DATE(created_at)"}
 
@@ -15,12 +9,16 @@ class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
   before_create :set_order_status
-  before_save :update_subtotal
+  before_save :update_subtotal, :update_number_items
 
   def subtotal
     self.line_items.collect do |item|
       item.valid? ? (item.quantity * item.price) : 0
     end.sum
+  end
+
+  def order_number_items
+    self.line_items.size
   end
 
   class << self
@@ -41,5 +39,9 @@ class Order < ActiveRecord::Base
 
   def update_subtotal
     self.total_price = subtotal
+  end
+
+  def update_number_items
+    self.number_items = order_number_items
   end
 end
