@@ -14,6 +14,10 @@ class LineItem < ActiveRecord::Base
     self.price = self.product.price
   end
 
+  def total_price
+    total_price = self.quantity * self.price
+  end
+
   private
   def total_quantity_product
     if self.quantity > self.product.total
