@@ -18,3 +18,4 @@
 //= require bootstrap/modal
 //= require bootstrap/dropdown
 //= require ckeditor/init
+//= require chartkick

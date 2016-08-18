@@ -3,6 +3,8 @@ class Order < ActiveRecord::Base
 
   scope :get_user, -> {joins(:user).select "orders.*", "users.name"}
 
+  scope :group_by_date, -> {group "DATE(created_at)"}
+
   belongs_to :user
   has_many :line_items, dependent: :destroy
 
