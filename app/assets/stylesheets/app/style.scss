@@ -13,11 +13,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @font-face {
   font-family: Playball;
-  src: url(fonts/Playball.ttf);
+  src:font-url('Playball.ttf');
 }
 @font-face {
   font-family: PT-SAN;
-  src: url(fonts/PTS56F.ttf);
+  src:font-url('PTS56F.ttf');
 }
 body {
   background-color: #fff;
@@ -264,7 +264,6 @@ a {
 .edu-widget .edu-widget-store_cart_and_profile .edu-widget-store_cart_and_profile-text, .edu-widget .edu-widget-store_cart_and_profile .edu-widget-store_cart_and_profile .edu-widget-store_cart_and_profile-username {
   color: #7ca877;
   font: 500 18px/24px "PT Sans",sans-serif;
-  letter-spacing: 3px;
   padding-left: 12px !important;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
@@ -1129,6 +1128,7 @@ input, button, select, textarea {
 }
 .label-in_progress{
   background-color: #337ab7;
+}
 #sliders{
   height: 365px;
   width: 100%;
@@ -1138,6 +1138,68 @@ input, button, select, textarea {
       height: 100%;
     }
   }
+}
 .filter-style{
   padding: 20px 0px;
+}
+.edu-widget-menu-list{
+  .edu-widget-menu-item:hover ul{
+    display: block;
+
+  }
+}
+.btn-circle {
+  border-radius: 15px;
+  font-size: 12px;
+  height: 30px;
+  line-height: 1.42857;
+  padding: 6px 0;
+  text-align: center;
+  width: 30px;
+}
+.moto-spacing-left-auto{
+  padding-bottom: 10px;
+}
+.panel-green {
+    border-color: #5cb85c;
+}
+.panel-green > .panel-heading {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: #fff;
+}
+.panel-heading{
+  .edu-text_system_7 {
+      color: #ffffff;
+      font-family: "PT Sans",sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.2;
+  }
+  .fa{
+    font-size: 20px;
+  }
+}
+.product_name{
+  font-size: 20px;
+  font-weight: 400;
+}
+.checkout-action-items{
+  padding-top: 50px;
+}
+.table-checkout{
+  .row{
+    padding-bottom: 20px
+  }
+}
+.checkout-image{
+  max-width: 100px
+}
+.product_name{
+  text-transform: uppercase;
+}
+.panel-green > .panel-heading{
+  background-color: #7ca877;
 }

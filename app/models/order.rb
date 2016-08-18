@@ -9,14 +9,16 @@ class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
   before_create :set_order_status
-  before_save :update_subtotal
+  before_save :update_subtotal, :update_number_items
 
   def subtotal
     self.line_items.collect do |item|
       item.valid? ? (item.quantity * item.price) : 0
     end.sum
   end
-
+  def order_number_items
+    self.line_items.size
+  end
   class << self
     def to_csv options = {}
       CSV.generate options do |csv|
@@ -35,5 +37,9 @@ class Order < ActiveRecord::Base
 
   def update_subtotal
     self.total_price = subtotal
+  end
+
+  def update_number_items
+    self.number_items = order_number_items
   end
 end

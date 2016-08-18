@@ -33,7 +33,7 @@
             class="dataTables_wrapper form-inline dt-bootstrap no-footer">
             <div class="row search-param">
             <div class="col-sm-6">
-              <%= search_form_for @search, url: customer_index_path do |f| %>
+              <%= search_form_for @search_user, url: customer_index_path do |f| %>
                 <%= select_tag :limit,
                   options_from_collection_for_select(Settings.show_limit,
                   :second, :second, selected: params[:limit] ||

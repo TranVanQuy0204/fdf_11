@@ -12,6 +12,15 @@ module ApplicationHelper
     menus.html_safe
   end
 
+  def full_title page_title = ''
+    base_title = "FOOD and DRINK"
+    if page_title.empty?
+      base_title
+    else
+      page_title << " | "
+      page_title << base_title
+    end
+  end
   private
   def menu_to_html objects, parent, menus
     menu = []
@@ -31,7 +40,7 @@ module ApplicationHelper
       menu.each do |ob|
         menus << "<li class='edu-widget-menu-item'>"
         menus << "<a class='edu-widget-menu-link
-          edu-widget-menu-link-level-1 edu-link' href='categories/#{ob.id}'>
+          edu-widget-menu-link-level-1 edu-link' href='/categories/#{ob.id}'>
           #{ob.name}</a>"
         menu_to_html objects, ob.id.to_s, menus
         menus << "</li>"

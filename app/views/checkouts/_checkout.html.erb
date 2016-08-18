@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <i class="fa fa-shopping-cart pull-right" aria-hidden="true"></i>
+    <span class="edu-text_system_7"><%= t ".title_order" %></span>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <%= form_for "" do |f| %>
+          <fieldset disabled="">
+            <div class="form-group">
+              <%= f.label :name %>:
+              <span class="s"><%= current_user.name %></span>
+            </div>
+            <div class="form-group">
+              <%= f.label :address %>:
+              <span class="step-2-checkout-address">
+                <%= current_user.address %>
+              </span>
+            </div>
+          </fieldset>
+        <% end %>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4">
+        <%= link_to checkout_path(current_order),
+          class: "btn btn-primary pull-right hidden", id: "checkout_finish",
+          method: :put do %>
+          <%= t ".checkout" %>
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

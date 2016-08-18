@@ -8,19 +8,35 @@
   <td class="text-center">
     <%= order_item.name %>
   </td>
-  <td class="text-center"><%= order_item.quantity %></td>
-  <td class="text-center"><%= order_item.price %></td>
   <td class="text-center">
-    <%= order_item.quantity * order_item.price %>
+    <%= form_for [order_item.product, order_item],
+      method: :put do |f| %>
+      <div class="col-sm-6 col-md-6">
+      <%= f.number_field :quantity,
+        value: order_item.quantity,
+        class: "form-control" %>
+      </div>
+      <div class="col-sm-6 col-md-6">
+      <%= f.button :submit, title: t(".update"),
+        class: "btn btn-warning btn-circle btn-lg" do %>
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      <% end %>
+      </div>
+    <% end %>
+  </td>
+  <td class="text-center"><%= number_to_currency order_item.price %></td>
+  <td class="text-center">
+    <%= number_to_currency(order_item.quantity * order_item.price) %>
   </td>
   <td class="text-center">
     <div class="moto-widget moto-widget-button
       moto-preset-3">
-      <%= link_to root_path,
-        class: "moto-widget-button-link
-        moto-size-medium" do %>
-        <%= t ".delete" %>
-      <% end %>
+      <%= link_to product_line_item_path(order_item.product,
+        order_item), method: :delete,
+        class: "btn btn-danger btn-circle btn-lg",
+        title: t(".delete") do %>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+       <% end %>
     </div>
   </td>
 </tr>
