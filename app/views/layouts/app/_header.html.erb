@@ -203,22 +203,8 @@
                         class: "edu-widget-menu-link
                         edu-widget-menu-link-level-1 edu-link" %>
                     </li>
-                    <li class="edu-widget-menu-item">
-                        <%= link_to root_path, class: "edu-widget-menu-link
-                          edu-widget-menu-link-level-1
-                          edu-widget-menu-link-submenu edu-link" do %>
-                          <%= t "home" %>
-                          <span class="fa edu-widget-menu-link-arrow"></span>
-                        <% end %>
-                      <ul class="edu-widget-menu-sublist">
-                        <li class="edu-widget-menu-item">
-                          <%= link_to t("home"), root_path,
-                            class: "edu-widget-menu-link
-                            edu-widget-menu-link-level-1 edu-link" %>
-                        </li>
-                      </ul>
-                    </li>
                   </ul>
+                  <%= showmenu %>
                 </div>
               </div>
             <div class="edu-cell col-sm-4">
