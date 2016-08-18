@@ -29,6 +29,9 @@ gem "ckeditor"
 gem "carrierwave", "0.10.0"
 gem "mini_magick", "3.8.0"
 gem "fog", "1.36.0"
+gem "chartkick", "~> 1.2.4"
+gem "groupdate", "~> 2.1.1"
+gem "active_median", "~> 0.1.0"
 group :development, :test do
   gem "byebug"
 end

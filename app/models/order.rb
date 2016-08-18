@@ -1,6 +1,8 @@
 class Order < ActiveRecord::Base
   enum status: [:new_order, :pendding, :in_progress, :finish, :cancle]
 
+  scope :group_by_date, -> {group "DATE(created_at)"}
+
   belongs_to :user
   has_many :line_items, dependent: :destroy
 
