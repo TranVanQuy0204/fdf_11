@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resource :address, only: :update
   resources :checkouts
   resources :users
+  resources :comments
   namespace :admin do
     root "pages#index"
     resources :users

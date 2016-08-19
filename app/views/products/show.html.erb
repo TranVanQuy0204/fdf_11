@@ -60,7 +60,17 @@
             </div>
           </div>
         </div>
+        <div class="col-xs-12">
+          <h2 class="page-header"><%= t ".comments" %></h2>
+          <div class="product_comment_total row">
+            <%= render @product.comments %>
+          </div>
+          <div class="row">
+            <%= render "comments/form", product: @product %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+

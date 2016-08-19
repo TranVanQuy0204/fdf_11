@@ -95,6 +95,9 @@ en:
     address:
       title_shipping: "Step 1: Shipping Address"
       address: "Address"
+  comments:
+    form:
+      post: "Post"
   devise:
     sessions:
       new:

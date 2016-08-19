@@ -1,0 +1,11 @@
+<%= simple_form_for [Comment.new] do |f| %>
+  <%= f.input :content, label: t(".comment") %>
+  <div class="hidden">
+    <%= f.input :product_id, input_html: {value: product.id} %>
+  </div>
+  <%= link_to "#{}", class: "btn btn-primary", id: "comment_post",
+    onclick: "return false" do %>
+    <%= t(".post") %>
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  <% end %>
+<% end %>
