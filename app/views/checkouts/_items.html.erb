@@ -11,7 +11,7 @@
           <% @order_items.each_with_index do |order_item, index| %>
             <tr>
               <td class="text-center">
-                <%= image_tag order_item.image,
+                <%= image_tag order_item.product.image,
                   alt: order_item.name,
                   class: "moto-widget-image-picture checkout-image" %>
               </td>

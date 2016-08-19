@@ -23,64 +23,7 @@
             moto-spacing-right-auto moto-spacing-bottom-auto
             moto-spacing-left-auto ">
             <div class="row">
-              <% @products.each do |product| %>
-                <div class="col-sm-3">
-                  <%= form_for [product, @order_item] do
-                    |f| %>
-                  <div class="moto-widget-store-main_item
-                    moto-widget-store-image-block moto-align-left">
-                    <div class="moto-widget moto-widget-image moto-preset-4">
-                      <%= link_to root_path, title: product.name do %>
-                        <div class="view effect">
-                          <%= image_tag product.image, alt: product.name,
-                            class: "moto-widget-image-picture" %>
-                          <div class="mask">
-                            <i class="fa fa-search-plus" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                        <div class="moto-widget-store-main_item-label">
-                          <%= t ".sales" %>
-                        </div>
-                      <% end %>
-                    </div>
-                    <%= link_to root_path, title: product.name,
-                      class: "moto-widget-store-main_item-title" do %>
-                      <span class="moto-text_system_14">
-                        <%= product.name %>
-                      </span>
-                    <% end %>
-                    <div class="store-product-element-container">
-                      <div class="moto-widget-store-main_item-price">
-                        <span class="moto-text_system_13">
-                          <%= product.price %>
-                        </span>
-                      </div>
-                      <div class="moto-widget-store-main_item-old_price">
-                        <%= product.price %>
-                      </div>
-                      <div class="store-product-element-container
-                        moto-widget-button moto-preset-default">
-                        <%= f.hidden_field :product_id, value: product.id %>
-                        <%= f.hidden_field :quantity, value: 1 %>
-                        <%= f.button :submit,
-                          title: t(".add_card"), class: "moto-widget-button-link
-                          moto-size-medium" do %>
-                          <span class="moto-widget-button-label">
-                            <%= t ".add_card" %>
-                          </span>
-                        <% end %>
-                      </div>
-                    </div>
-                    <div class="store-product-element-container">
-                      <fieldset class="rating">
-                        <input type="radio" id="star5" name="rating" value="5" />
-                        <label class = "full" for="star5"></label>
-                      </fieldset>
-                    </div>
-                  </div>
-                  <% end %>
-                </div>
-              <% end %>
+              <%= render @products %>
             </div>
             <%= paginate @products, theme: "twitter-bootstrap-3" %>
           </div>

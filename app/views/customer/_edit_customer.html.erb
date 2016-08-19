@@ -1,0 +1,8 @@
+<%= simple_form_for current_user, method: :put do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone %>
+  <%= f.button :submit, class: "btn-primary" do %>
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  <% end %>
+<% end %>

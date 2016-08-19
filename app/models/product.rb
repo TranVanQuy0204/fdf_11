@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-
+  mount_uploader :image, ImageUploader
   scope :order_by_created_at, -> {order(created_at: :desc)}
 
   belongs_to :category

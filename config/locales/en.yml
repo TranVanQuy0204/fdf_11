@@ -17,15 +17,22 @@ en:
       default: "%d %b %Y %H:%M:%S"
   messages:
     error_load: "Don't find this element"
+    update_success: "Update success"
+    admin_login : "You can't go to manage page"
+    update_success: "Update success"
+    admin_login : "You can't go to manage page"
+    order_finish: "You have order"
+    update_success: "Update success"
+    admin_login : "You can't go to manage page"
   categories:
     show:
       add_card: "Add Card"
       sales: "Sales"
-  messages:
-    update_success: "Update success"
-    admin_login : "You can't go to manage page"
   products:
     show:
+      add_card: "Add Card"
+      sales: "Sales"
+    product:
       add_card: "Add Card"
       sales: "Sales"
   customer:
@@ -44,9 +51,18 @@ en:
       name: "User Name"
       created_at: "Created At"
       code: "Code"
-  messages:
-    update_success: "Update success"
-    admin_login : "You can't go to manage page"
+  orders:
+    order_body:
+      title: "Orders"
+      search: "Search"
+      no_record: "No Record"
+      export_csv: "Export CSV"
+      export_xls: "Export XLS"
+      name: "Product Name"
+      created_at: "Created At"
+      code: "Code"
+      delete: "Delete"
+      confirm: "Are you confirm?"
   pages:
     index:
       add_card: "Add Card"

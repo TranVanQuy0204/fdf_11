@@ -19,9 +19,11 @@ class LineItem < ActiveRecord::Base
 
   private
   def total_quantity_product
-    if self.quantity > self.product.total
-      errors.add "product",
-        I18n.t("messages.validates_total")
+    unless self.product.nil?
+      if self.quantity > self.product.total
+        errors.add "product",
+          I18n.t("messages.validates_total")
+      end
     end
   end
 end

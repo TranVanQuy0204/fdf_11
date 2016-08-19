@@ -10,7 +10,7 @@
               <div class="moto-widget-text-content moto-widget-text-editable">
                 <p class="moto-text_system_4 text-center">
                   <span class="moto-color_custom5">
-                    <%= @user.name %>
+                    <%= current_user.name %>
                   </span>
                 </p>
               </div>
@@ -28,7 +28,7 @@
               <div class="col-xs-3">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <%= @user.name %>
+                    <%= current_user.name %>
                   </div>
                   <div class="panel-body">
                     <div class="navbar-default sidebar" role="navigation">
@@ -49,8 +49,9 @@
                             <% end %>
                           </li>
                           <li>
-                            <%= link_to edit_customer_path(@user),
-                              class: current_class?(edit_customer_path(@user)) do %>
+                            <%= link_to edit_customer_path(current_user),
+                              class: current_class?(
+                              edit_customer_path(current_user)) do %>
                               <%= t ".profile" %>
                             <% end %>
                           </li>
@@ -61,7 +62,7 @@
                 </div>
               </div>
               <div class="col-xs-9">
-                <%= render "customer" %>
+                <%= render "order_body" %>
               </div>
             </div>
           </div>
