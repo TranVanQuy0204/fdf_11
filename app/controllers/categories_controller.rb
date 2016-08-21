@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   def show
     @products = @category.products.order_by_created_at
-      .page_kimanari params[:page]
+      .page_kimanari(params[:page]).per(12)
     @order_item = current_order.line_items.new
   end
 

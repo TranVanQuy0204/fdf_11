@@ -1,9 +1,10 @@
 class LineItemsController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     @order = current_order
     get_order_item
-    if @order.save!
+    if @order.save
       session[:order_id] = @order.id
       flash[:success] = t ".create_succes"
       redirect_to carts_path
@@ -16,9 +17,9 @@ class LineItemsController < ApplicationController
     @order = current_order
     @order_item = @order.line_items.find params[:id]
     name = @order_item.product.name
-    if @order_item.destroy!
+    if @order_item.destroy
       flash[:success] = t ".destroy_succes", value: name
-      @order.save!
+      @order.save
       redirect_to carts_path
     else
       flash[:danger] = t ".destroy_error", value: name
@@ -30,7 +31,7 @@ class LineItemsController < ApplicationController
     @order = current_order
     @order_item = @order.line_items.find params[:id]
     name = @order_item.product.name
-    if @order_item.update_attributes! order_item_params
+    if @order_item.update_attributes order_item_params
       flash[:success] = t ".update_succes", value: name
       @order.save!
       redirect_to carts_path

@@ -1,8 +1,9 @@
 class OrdersController < ApplicationController
-  before_action :load_order, only: [:show, :destroy]
-  # load_and_authorize_resource
+  # before_action :load_order, only: [:show, :destroy]
+  load_and_authorize_resource
+  before_action :authenticate_user!
 
-  def index
+  def show
     @search_order = @order.line_items.select_product.search params[:q]
     @order_items = @search_order.result
   end
@@ -10,6 +11,7 @@ class OrdersController < ApplicationController
   def destroy
     if @order.update_attributes status: :cancel
       flash[:success] = t ".success"
+      session.delete :order_id
     else
       flash[:danger] = t ".error"
     end

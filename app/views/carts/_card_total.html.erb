@@ -27,7 +27,8 @@
       </table>
     </div>
     <div class="row pull-right">
-      <%= link_to root_path, class: "btn btn-danger" do %>
+      <%= link_to order_path(current_order), class: "btn btn-danger",
+        method: :delete, data: {confirm: t(".delete_confirm")} do %>
         <span class="fa fa-trash"></span>
         <%= t ".delete_order" %>
       <% end %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root "pages#index"
   devise_for :users
   resources :categories, only: :show
@@ -12,7 +14,9 @@ Rails.application.routes.draw do
   resources :filter_products, only: :index
   resource :address, only: :update
   resources :checkouts
-  resources :users
+  resources :users, only: [:edit, :update] do
+    resources :activities, only: :index
+  end
   resources :comments
   namespace :admin do
     root "pages#index"
@@ -20,5 +24,6 @@ Rails.application.routes.draw do
     resources :categories
     resources :products
     resources :orders
+    resources :activities, only: :index
   end
 end

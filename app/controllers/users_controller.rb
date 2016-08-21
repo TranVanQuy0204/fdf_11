@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
+  before_action :authenticate_user!
 
   def update
     if @user.update_attributes user_params

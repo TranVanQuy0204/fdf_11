@@ -2,12 +2,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
     :trackable, :validatable
   enum role: [:admin, :user]
-
   has_many :orders, dependent: :destroy
   has_many :activities, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :suggestions, class_name: Suggest.name, dependent: :destroy
 
+  before_create :set_role
   class << self
     def from_omniauth auth
       where(provider: auth.provider, uid: auth.uid).first_or_initialize
@@ -37,5 +37,9 @@ class User < ActiveRecord::Base
         end
       end
     end
+  end
+  private
+  def set_role
+    self.role = :user
   end
 end

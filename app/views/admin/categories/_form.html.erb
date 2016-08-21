@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xs-6">
         <%= f.label :image %>
-        <%= f.file_field :image %>
+        <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
       </div>
       <div class="col-xs-6">
         <% unless @category.image.blank? %>
@@ -15,7 +15,7 @@
     </div>
   </div>
   <%= f.input :parent_code, label: t(".parent") do %>
-    <%= f.select :parent_code, @categories.map{|r| [r.name, r.id]},
+    <%= f.select :parent_code, get_categories.map{|r| [r.name, r.id]},
       include_blank: true %>
   <% end %>
   <div class="form-group">

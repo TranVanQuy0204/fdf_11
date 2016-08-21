@@ -27,7 +27,7 @@
                       <p class="product-description-title">
                         <%= t ".description" %>
                       </p>
-                      <span class="text"><%= @product.description %></span>
+                      <span class="text"><%= raw @product.description %></span>
                     </div>
                   </div>
                   <div class="row">
@@ -55,6 +55,9 @@
                     <% end %>
                   </div>
                   <hr/>
+                  <div class="col-xs-12">
+                    <%= social_share_button_tag(@product.name) %>
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,9 +68,11 @@
           <div class="product_comment_total row">
             <%= render @product.comments %>
           </div>
-          <div class="row">
-            <%= render "comments/form", product: @product %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="row">
+              <%= render "comments/form", product: @product %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

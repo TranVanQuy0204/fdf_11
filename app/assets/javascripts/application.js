@@ -19,3 +19,4 @@
 //= require bootstrap/dropdown
 //= require ckeditor/init
 //= require chartkick
+//= require social-share-button

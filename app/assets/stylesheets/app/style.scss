@@ -925,9 +925,11 @@ input, button, select, textarea {
 .mask{
   font-size: 50px;
   z-index: -1;
+
   .fa{
     margin-left: -20px;
     color: #7ca877;
+    display:none;
   }
 }
 .effect:hover img{
@@ -938,6 +940,9 @@ input, button, select, textarea {
   opacity: 1;
   transform: translateY(0px);
   z-index: 1;
+  .fa{
+    display:block
+  }
 }
 
 .moto-widget-image.moto-preset-4 .moto-widget-image-link:before {
@@ -1232,4 +1237,9 @@ input, button, select, textarea {
 }
 .panel-green > .panel-heading{
   background-color: #7ca877;
+}
+.alert-alert {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
 }

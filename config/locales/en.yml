@@ -24,6 +24,7 @@ en:
     order_finish: "You have order"
     update_success: "Update success"
     admin_login : "You can't go to manage page"
+    success: "Successful action"
   categories:
     show:
       add_card: "Add Card"
@@ -98,6 +99,16 @@ en:
   comments:
     form:
       post: "Post"
+  line_items:
+    update:
+      update_succes: "Order update success"
+      update_error: "sorry! you can't update this product"
+    destroy:
+      destroy_succes: "Order delete success"
+      destroy_error: "Order delete fails"
+    create:
+      create_succes: "Product added success"
+      update_error: "sorry! this product is empty"
   devise:
     sessions:
       new:
@@ -156,6 +167,8 @@ en:
     update:
       destroy_succes: "Update product %{value} succes"
       destroy_succes: "Update product %{value} errors"
+    card_total:
+      delete_confirm: "Are you delete this order?"
   views:
     pagination:
       first: "&laquo; First"
@@ -163,6 +176,14 @@ en:
       previous: "&lsaquo; Prev"
       next: "Next &rsaquo;"
       truncate: "&hellip;"
+  example_mailer:
+    sample_email:
+      hi: "Hi,"
+      thank_you: "Thank you when you go to my Food and Drink!"
+      name: "Product name"
+      price: "Price"
+      quantity: "Quantity"
+      total: "Total price"
   admin:
     users:
       index:
@@ -248,7 +269,14 @@ en:
         export_csv: "Export CSV"
         export_xls: "Export XLS"
         delete: "Cancel"
-        name: "User Name"
+        name: "Products Name"
         created_at: "Created At"
         confirm: "Are you cancel this order?"
         confirm_finish: "Are you finish this order?"
+      update:
+        success: "Order update success"
+        error: "Order update error"
+      destroy:
+        success: "Order destroy success"
+        error: "Order destroy error"
+

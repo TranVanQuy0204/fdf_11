@@ -2,9 +2,9 @@ class Category < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   validates :name, presence: true, length: {minimum: 1}
-  validates :description, length: {maximum: 255}
   has_many :products
-
+  include PublicActivity::Model
+  tracked owner: ->(controller, model) {controller && controller.current_user}
   class << self
     def to_csv options = {}
       CSV.generate options do |csv|

@@ -7,9 +7,10 @@ class Ability
     when user.admin?
       can :manage, :all
     when user.user?
-      can :read, :all
+      can :manage, :all
     else
-      can :read, :all
+      can :read, Product
+      can :read, Comment
     end
   end
 end

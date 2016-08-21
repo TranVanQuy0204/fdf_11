@@ -32,6 +32,8 @@ gem "chatwork"
 gem "chartkick", "~> 1.2.4"
 gem "groupdate", "~> 2.1.1"
 gem "active_median", "~> 0.1.0"
+gem "social-share-button"
+gem "public_activity"
 group :development, :test do
   gem "byebug"
 end
@@ -39,7 +41,9 @@ group :development do
   gem "web-console", "~> 2.0"
   gem "spring"
   gem "sqlite3"
+  gem "seed_dump"
 end
 group :production do
   gem "pg"
+  gem "non-stupid-digest-assets", "~> 1.0.4"
 end

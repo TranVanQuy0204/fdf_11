@@ -3,7 +3,7 @@ class Admin::ProductsController < AdminController
 
   def index
     @search = Product.search params[:q]
-    @products = @search.result.page_kimanari(params[:page_kimanari])
+    @products = @search.result.page_kimanari(params[:page])
       .per params[:limit]
     respond_to do |format|
       format.html

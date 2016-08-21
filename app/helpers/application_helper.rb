@@ -21,6 +21,18 @@ module ApplicationHelper
       page_title << base_title
     end
   end
+
+  def cart_count
+    current_order.nil? ? 0 : current_order.line_items.count
+  end
+
+  def order_pendding
+    Order.with_new_order(1).count
+  end
+
+  def get_categories
+    categories = Category.all
+  end
   private
   def menu_to_html objects, parent, menus
     menu = []

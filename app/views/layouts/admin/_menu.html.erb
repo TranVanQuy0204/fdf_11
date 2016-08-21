@@ -13,7 +13,9 @@
           class: current_class?(admin_orders_path) do %>
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           <%= t ".order" %>
-          <span class="badge pull-right label-danger">7</span>
+          <span class="badge pull-right label-danger">
+            <%= order_pendding %>
+          </span>
         <% end %>
       </li>
       <li>
@@ -38,7 +40,8 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "#", class: current_class?("#") do %>
+        <%= link_to admin_activities_path,
+          class: current_class?(admin_activities_path) do %>
           <i class="fa fa-history" aria-hidden="true"></i>
           <%= t ".history" %>
         <% end %>

@@ -24,5 +24,6 @@ module BaseApp
     config.active_record.raise_in_transactional_callbacks = true
     require "csv"
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths += Ckeditor.assets
   end
 end

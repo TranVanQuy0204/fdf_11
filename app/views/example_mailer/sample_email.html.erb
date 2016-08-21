@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= t ".hi" %> <%= @user.name %></h1>
+    <p>
+      <%= t "thank_you" %>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <td><%= t ".name" %></td>
+          <td><%= t ".price" %></td>
+          <td><%= t ".quantity" %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @line_items.each do |line_itmem| %>
+          <tr>
+            <td><%= line_itmem.product.name %></td>
+            <td><%= line_itmem.price %></td>
+            <td><%= line_itmem.quantity %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div> <%= t ".total" %>: <%= @current_order.total_price %> </div>
+    <div><%= link_to root_url, t("app_name") %></div>
+  </body>
+</html>

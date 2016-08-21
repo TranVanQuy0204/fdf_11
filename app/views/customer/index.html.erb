@@ -37,13 +37,14 @@
                           <li>
                             <%= link_to customer_index_path,
                               class: current_class?(customer_index_path) do %>
-                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                              <i class="fa fa-shopping-cart"
+                                aria-hidden="true"></i>
                               <%= t ".order" %>
                             <% end %>
                           </li>
                           <li>
-                            <%= link_to "#",
-                              class: current_class?("#") do %>
+                            <%= link_to user_activities_path(@user),
+                              class: current_class?(user_activities_path(@user)) do %>
                               <i class="fa fa-history" aria-hidden="true"></i>
                               <%= t ".history" %>
                             <% end %>

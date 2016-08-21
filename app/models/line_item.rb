@@ -2,6 +2,9 @@ class LineItem < ActiveRecord::Base
   scope :select_product, -> do
     joins(:product).select "line_items.*", "products.name", "products.image"
   end
+
+  include PublicActivity::Model
+  tracked owner: ->(controller, model) {controller && controller.current_user}
   belongs_to :product
   belongs_to :order
 
@@ -17,6 +20,11 @@ class LineItem < ActiveRecord::Base
     total_price = self.quantity * self.price
   end
 
+  class << self
+    def minus options = {}
+      puts "============"
+    end
+  end
   private
   def total_quantity_product
     unless self.product.nil?

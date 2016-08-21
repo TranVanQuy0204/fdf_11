@@ -1,0 +1,95 @@
+<div class="clear-fix"></div>
+<section id="section-content" class="content page-29 moto-section">
+  <div class="moto-widget moto-widget-row row-fixed">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="moto-cell col-sm-12">
+          <div class="moto-widget moto-widget-text moto-preset-default
+            moto-spacing-top-large moto-spacing-right-auto
+            moto-spacing-bottom-auto moto-spacing-left-auto">
+              <div class="moto-widget-text-content moto-widget-text-editable">
+                <p class="moto-text_system_4 text-center">
+                  <span class="moto-color_custom5">
+                    <%= current_user.name %>
+                  </span>
+                </p>
+              </div>
+          </div>
+          <div class="moto-widget moto-widget-divider moto-preset-default
+            moto-align-center moto-spacing-top-small moto-spacing-right-auto
+            moto-spacing-bottom-small moto-spacing-left-auto">
+              <hr class="moto-widget-divider-line">
+          </div>
+          <div class="moto-widget moto-widget-store-product-grid
+            moto-preset-default moto-spacing-top-small
+            moto-spacing-right-auto moto-spacing-bottom-auto
+            moto-spacing-left-auto ">
+            <div class="row">
+              <div class="col-xs-3">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <%= current_user.name %>
+                  </div>
+                  <div class="panel-body">
+                    <div class="navbar-default sidebar" role="navigation">
+                      <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav in" id="side-menu">
+                          <li>
+                            <%= link_to customer_index_path,
+                              class: current_class?(customer_index_path) do %>
+                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                              <%= t ".order" %>
+                            <% end %>
+                          </li>
+                          <li>
+                            <%= link_to user_activities_path(current_user),
+                              class: current_class?(user_activities_path(current_user)) do %>
+                              <i class="fa fa-history" aria-hidden="true"></i>
+                              <%= t ".history" %>
+                            <% end %>
+                          </li>
+                          <li>
+                            <%= link_to edit_customer_path(current_user),
+                              class: current_class?(
+                              edit_customer_path(current_user)) do %>
+                              <%= t ".profile" %>
+                            <% end %>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-9">
+                                <table id="dataTables-example" class="table table-striped
+                  table-bordered table-hover dataTable no-footer dtr-inline"
+                  role="grid" aria-describedby="dataTables-example_info">
+                  <thead>
+                    <tr role="row">
+                      <th>#</th>
+                      <th><%= sort_link @search, :name, t(".user_name") %></th>
+                      <th><%= sort_link @search, :email, t(".target") %></th>
+                      <th><%= sort_link @search, :email, t(".action") %></th>
+                      <th>
+                        <%= sort_link @search, :created_at, t(".created_at") %>
+                      </th>
+                    </tr>
+                    <tbody>
+                      <% if @activities.count > 0 %>
+                        <%= render @activities %>
+                      <% else %>
+                        <%= render "shared/record", value: 5 %>
+                      <% end %>
+                    </tbody>
+                  </thead>
+                </table>
+                <%= paginate @activities, theme: "twitter-bootstrap-3" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

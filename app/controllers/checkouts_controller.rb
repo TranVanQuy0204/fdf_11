@@ -1,5 +1,7 @@
  class CheckoutsController < ApplicationController
-   def index
+  before_action :authenticate_user!, :check_order_item
+
+  def index
     if current_order.id.present?
       @order_items = current_order.line_items.select_product
     else
@@ -27,5 +29,12 @@
     message = t("messages.order_finish")
     message_body = "[To:#{account_id}] #{name} #{message}!"
     ChatWork::Message.create room_id: room_id, body: message_body
+    ExampleMailer.sample_email(current_user, current_order).deliver
+  end
+  def check_order_item
+    if current_order.line_items.count <= 0
+      session.delete :order_id
+      redirect_to root_path
+    end
   end
  end

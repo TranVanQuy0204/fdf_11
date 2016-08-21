@@ -3,11 +3,11 @@
 @import "font-awesome";
 @font-face {
   font-family: Playball;
-  src: url(../app/fonts/Playball.ttf);
+  src:font-url('Playball.ttf');
 }
 @font-face {
   font-family: PT-SAN;
-  src: url(../app/fonts/PTS56F.ttf);
+  src:font-url('PTS56F.ttf');
 }
 body {
   background-color: #f8f8f8;
